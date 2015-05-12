@@ -310,7 +310,7 @@ function changeEffect() {
     effectControls.children[effect].classList.add("display");
 
     switch (effect) {
-        case 0: // Delay
+        case -1: // Delay
             currentEffectNode = createDelay();
             break;
         case 1: // Reverb
@@ -328,7 +328,7 @@ function changeEffect() {
         case 5: // Chorus
             currentEffectNode = createChorus();
             break;
-        case 6: // Flange
+        case 0: // Flange
             currentEffectNode = createFlange();
             break;
         case 7: // Ringmod

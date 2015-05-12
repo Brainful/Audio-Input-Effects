@@ -289,7 +289,23 @@ AnalyserView.prototype.doFrequencyAnalysis = function( analyser ) {
         analyser.getByteTimeDomainData(freqByteData);
         break;
     }
-  
+    // CdC detect hum vs. click
+    var spec = this.freqByteData;
+    var low = 0;
+    var high = 0;
+    for (i = 0; i < 30; i++) {
+        low += spec[i];
+        high += spec[i+30];
+    }
+  if ((low > 3000) & (high < 2000))
+  {
+      console.log('Humm.  low:', low,' high: ',high);
+  }
+    else
+    if ((low < 10000) & (high > 3000))
+    {
+        console.log('Click.  low:', low,' high: ',high);
+    }
     this.drawGL();
 }
 
