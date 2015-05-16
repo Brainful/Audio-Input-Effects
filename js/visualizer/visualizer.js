@@ -118,7 +118,7 @@ AnalyserView.prototype.initGL = function() {
     this.cameraController = cameraController;
     
     cameraController.xRot = -30; //-55;
-    cameraController.yRot = 0;
+    cameraController.yRot = 50;
     gl.clearColor(backgroundColor[0], backgroundColor[1], backgroundColor[2], backgroundColor[3]);
     gl.enable(gl.DEPTH_TEST);
 

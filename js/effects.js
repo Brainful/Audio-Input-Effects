@@ -190,7 +190,7 @@ function initAudio() {
     }
     irRRequest.send();
 
-    o3djs.require('o3djs.shader');
+    //o3djs.require('o3djs.shader');
 
     analyser1 = audioContext.createAnalyser();
     analyser1.fftSize = 1024;

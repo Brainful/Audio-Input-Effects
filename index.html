@@ -50,7 +50,7 @@
 	<div id="arranger">
 	<canvas id="view1" width="750" height="300"></canvas><br>
 	<canvas class="hidden" id="view2" width="750" height="200"></canvas>
-	<div class="hidden">
+<!--	<div class="hidden">
 		<input type="radio" name="radioSet" value="data"
 		onmousedown="analyserView1.setAnalysisType(ANALYSISTYPE_FREQUENCY); analyserView2.setAnalysisType(ANALYSISTYPE_FREQUENCY);">Frequency
 		<input type="radio" name="radioSet" value="data"
@@ -59,7 +59,7 @@
 		onmousedown="analyserView1.setAnalysisType(ANALYSISTYPE_3D_SONOGRAM); analyserView2.setAnalysisType(ANALYSISTYPE_3D_SONOGRAM);">3D Sonogram
 		<input type="radio" name="radioSet" value="data"
 		onmousedown="analyserView1.setAnalysisType(ANALYSISTYPE_WAVEFORM); analyserView2.setAnalysisType(ANALYSISTYPE_WAVEFORM);">Waveform
-	</div>
+	</div>-->
 	<div class="hidden" id="effectMix">Effect: <select id="effect">
 <!--		<option>Delay </option>
 		<option>Reverb </option>
@@ -84,6 +84,7 @@
 		<option>BitCrusher</option>
 		<option>Apollo Quindar Tones</option>-->
 </select>
+
 &nbsp;&nbsp;Effect Mix: <input type="range" min="0.0" max="1.0" step="0.01" value="1.0" style="height: 20px; width: 200px;"
 onInput="crossfade( event.target.value );">
 &nbsp;&nbsp;Mono input: <input type="checkbox" checked onchange="toggleMono()">
@@ -127,7 +128,7 @@ onInput="crossfade( event.target.value );">
 		Freaky depth: <input id="fldepth" type="range" min="0.0005" max="0.005" step="0.00045" value="0.002" style="height: 20px; width: 200px;" onInput="if (fldepth) fldepth.gain.value = event.target.value;"><br>
 		Freaky feedback: <input id="flfb" type="range" min="0" max="1" step="0.01" value="0.8" style="height: 20px; width: 200px;" onInput="if (flfb) flfb.gain.value = event.target.value;">
 	</div>
-	<div id="ringmodControls">A ring modulator.<br>
+<!--	<div id="ringmodControls">A ring modulator.<br>
 		Ringmod freq: <input id="rmfreq" type="range" min="9" max="13" step="0.01" value="11" style="height: 20px; width: 200px;" onInput="if (rmod) rmod.frequency.value = Math.pow(2, event.target.value);">
 	</div>
 	<div id="stereoChorusControls">A stereo chorus effect.<br>
@@ -193,7 +194,7 @@ onInput="crossfade( event.target.value );">
 	</div>
 	<div id="apolloControls">Apollo Quindar tone effect.<br>
 		Noise floor: <input id="apolloFloor" type="range" min="0.0" max="0.2" step="0.001" value="0.01" style="height: 20px; width: 200px;" onInput="if (apolloGate)    apolloGate.curve = generateNoiseFloorCurve(event.target.value);">
-	</div>
+	</div>-->
 
 </div>
 <!--
@@ -203,7 +204,7 @@ onInput="crossfade( event.target.value );">
 <!--
   <a href="https://github.com/cwilso/Audio-Input-Effects" style="position: absolute; z-index:2; top: 0; right: 0; border: 0;"><img src="img/forkme.png" alt="Fork me on GitHub"></a>
 -->
-
+<!--
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -216,6 +217,6 @@ onInput="crossfade( event.target.value );">
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
+</script>-->
 </body>
 </html>
