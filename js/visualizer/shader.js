@@ -148,7 +148,7 @@ o3djs.shader.asyncLoadFromURL = function(gl,
 
   var vertexText = o3djs.shader.sendTextFileRequest(vertexURL,shaderVertexLoaderCallback.bind(shaderLoader));
   var fragmentText = o3djs.shader.sendTextFileRequest(fragmentURL,shaderFragmentLoaderCallback.bind(shaderLoader));
-
+var brk1;
 }
 
 /**
